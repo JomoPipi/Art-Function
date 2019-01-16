@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Art Function</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body>
+    <div class="fake-borders">
+        <div id="container">
+            <div id="artUI">
+                <img src="/img/af.png" id="af">
+                <br>
+                
+                <textarea id="coords"></textarea>
+                <br>
+
+                <div id="brushtypes">
+                    <label>
+                        <input type="radio" name="test" id="pencil" value="small" checked>
+                        <img src="/img/pencil.png"  class="icon">
+                    </label>
+                    <label>
+                        <input type="radio" name="test" id="line" value="small" checked>
+                        <img src="/img/line.png"  class="icon">
+                    </label>
+
+
+                    <label>
+                        <input type="radio" name="test" id="oval" value="small" checked>
+                        <img src="/img/oval.png"  class="icon">
+                    </label>
+                    <label>
+                        <input type="radio" name="test" id="rect" value="small" checked>
+                        <img src="/img/rect.png"  class="icon">
+                    </label>
+
+
+                    <label>
+                        <input type="radio" name="test" id="soval" value="small" checked>
+                        <img src="/img/soval.png"  class="icon">
+                    </label>
+                    <label>
+                        <input type="radio" name="test" id="srect" value="small" checked>
+                        <img src="/img/srect.png"  class="icon">
+                    </label>
+
+
+                    <label>
+                        <input type="radio" name="test" id="getColor" value="small" checked>
+                        <img src="/img/getColor.png"  class="icon">
+                    </label>
+                    <label>
+                        <input type="radio" name="test" id="fill" value="small" checked>
+                        <img src="/img/fill.png"  class="icon">
+                    </label>
+                </div>
+                
+
+                <div id="colorandsize">
+                    <img src="/img/minus.png" style="float:left;margin-left:5%;width:15%;height:20%;">
+                    <img src="/img/plus.png" style="float:right;margin-right:5%;width:15%;height:20%;">
+                    <input type="range" min="1" max="50" value="5" id="size">
+                    <br>
+                    <br>
+                    <input type="button" id="color" class="jscolor" value="007700" ></button>
+                </div>
+
+                
+                <div id="cur">
+                    <input type="image" id="undo" src="/img/undo.png" class="urc">
+                    <input type="image" id="redo" src="/img/redo.png" class="urc">
+                    <br> <br>
+                    <input type="image" id="clear" src="/img/clear.png" class="urc">
+                    <br>
+                </div>
+                
+            </div>
+
+
+            <div class="easel">
+                <canvas id="ctx"> </canvas>
+                
+                <div id="br_handle"></div>
+                
+                <div id="bl_handle"></div>
+                
+                <div id="tr_handle"></div>
+                
+                <div id="tl_handle"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/jscolor.js"></script>
+    <script src="./JS/Load.js"></script>
+    <script src="./JS/Tool.js"></script>
+    <script src="./JS/Art.js"></script>
+    <script src="./JS/Resize.js"></script>
+    <script src="./JS/Draw.js"></script>
+</body>
+
+</html>
